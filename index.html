@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#0B1220" />
+    <script>
+      (() => {
+        let theme;
+        try { theme = localStorage.getItem('tks-theme'); } catch {}
+        if (theme !== 'dark' && theme !== 'light') {
+          theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.dataset.theme = theme;
+        document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'dark' ? '#0e151e' : '#f4f6f8');
+      })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Steel fabrication, structural roofing, gates and custom metalwork in Chennai. See the work of TKS Engineering Works." />
+    <meta property="og:title" content="TKS Engineering Works | Built in Steel" />
+    <meta property="og:description" content="Structural steel work, fabrication, gates, railings and metalwork in Chennai." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/projects/hero-structural-roofing.jpeg" />
+    <meta property="og:url" content="https://tksengworks.com/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="site-url" content="https://tksengworks.com" />
+    <link rel="canonical" href="https://tksengworks.com/" />
+    <meta name="robots" content="index,follow" />
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"LocalBusiness","name":"TKS Engineering Works","url":"https://tksengworks.com/","email":"tksengneering2004@gmail.com","telephone":"+91 9840682818","address":{"@type":"PostalAddress","streetAddress":"No 64, Mugappair Rd, Padi","addressLocality":"Chennai","addressRegion":"Tamil Nadu","postalCode":"600058","addressCountry":"IN"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"16:00"}]}
+    </script>
+    <title>TKS Engineering Works | Steel Fabrication Chennai</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
